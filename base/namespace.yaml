@@ -2,4 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: mqtt
-  app.kubernetes.io/managed-by: openshift-gitops
+  labels:
+    app.kubernetes.io/managed-by: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
